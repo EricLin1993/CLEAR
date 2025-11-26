@@ -1,6 +1,9 @@
 ## Consistency-guided Long-range Enhanced Attention for Recon-struction (CLEAR) of Non-Uniform Sampling NMR
 
-![Framework of CLEAR](Image.png)
+<div align="center">
+  <img src="https://github.com/EricLin1993/CLEAR/blob/main/Image.png" width="300">
+</div>
+
 
 CLEAR is a PyTorch implementation for reconstructing nonuniformly sampled (NUS) 3D NMR spectra from hypercomplex NMRPipe data. The model leverages Conformer blocks (MHSA + depthwise separable convolution + FFN) and explicitly interleaves a Data Consistency (DC) layer between phases to preserve fidelity to acquired samples in the time/frequency domains. A complex-valued loss is optimized by computing MSE over the real and imaginary channels.
 
@@ -108,3 +111,4 @@ python train.py
 - Path/casing: ensure `NUS_Data` matches notebook paths on case-sensitive systems.
 - Import errors: activate the correct virtual environment and install dependencies.
 - GPU memory: reduce `batch_size` or the model width (`model_dim`) during training.
+
