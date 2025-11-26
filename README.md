@@ -1,7 +1,7 @@
 ## Consistency-guided Long-range Enhanced Attention for Recon-struction (CLEAR) of Non-Uniform Sampling NMR
 
 <div align="center">
-  <img src="https://github.com/EricLin1993/CLEAR/blob/main/Image.png" width="300">
+  <img src="https://github.com/EricLin1993/CLEAR/blob/main/Image.png" width="600">
 </div>
 
 
@@ -111,4 +111,5 @@ python train.py
 - Path/casing: ensure `NUS_Data` matches notebook paths on case-sensitive systems.
 - Import errors: activate the correct virtual environment and install dependencies.
 - GPU memory: reduce `batch_size` or the model width (`model_dim`) during training.
+
 
