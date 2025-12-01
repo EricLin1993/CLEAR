@@ -5,7 +5,7 @@
   <img src="https://github.com/EricLin1993/CLEAR/blob/main/Image.png" width="500">
 </div>
 <br>
-<b>CLEAR</b> is a PyTorch implementation for reconstructing nonuniformly sampled (<b>NUS</b>) 3D NMR spectra from hypercomplex NMRPipe data. The model leverages Conformer blocks (<b>MHSA</b>+ depthwise separable convolution + <b>FFN</b>) and explicitly interleaves a Data Consistency (DC) layer between phases to preserve fidelity to acquired samples in the time/frequency domains. A complex-valued loss is optimized by computing MSE over the real and imaginary channels.
+<b>CLEAR</b> is a PyTorch implementation for reconstructing nonuniformly sampled (<b>NUS</b>) 3D NMR spectra from hypercomplex NMRPipe data. The model leverages Conformer blocks (<b>MHSA</b>+ depthwise separable convolution + <b>FFN</b>) and explicitly interleaves a Data Consistency (<b>DC</b>) layer between phases to preserve fidelity to acquired samples in the time/frequency domains. A complex-valued loss is optimized by computing MSE over the real and imaginary channels.
 
 
 ### Repository structure
@@ -86,6 +86,7 @@ Default working directory is `Python Code/`.
 cd "Python Code"
 python train.py
 ```
+
 
 
 
