@@ -1,4 +1,4 @@
-## Consistency-guided Long-range Enhanced Attention for Recon-struction (CLEAR) of Non-Uniform Sampling NMR
+# Consistency-guided Long-range Enhanced Attention for Recon-struction (CLEAR) of Non-Uniform Sampling NMR
 
 <br>
 <div align="center">
@@ -6,11 +6,11 @@
 </div>
 <br>
 
-### Description
+## Description
 <b>CLEAR</b> is a PyTorch implementation for reconstructing nonuniformly sampled (<b>NUS</b>) 3D NMR spectra from hypercomplex NMRPipe data. The model leverages Conformer blocks (<b>MHSA</b>+ depthwise separable convolution + <b>FFN</b>) and explicitly interleaves a Data Consistency (<b>DC</b>) layer between phases to preserve fidelity to acquired samples in the time/frequency domains. A complex-valued loss is optimized by computing MSE over the real and imaginary channels.
 
 
-### Repository structure 
+## Repository structure 
 
 ```
 CLEAR/
@@ -31,7 +31,7 @@ CLEAR/
  
 ```
 
-### Installation
+## Installation
 
 - Python 3.9+; PyTorch with CUDA is recommended (CPU is supported)
 - Dependencies: `torch`, `numpy`, `scipy`, `nmrglue`, `matplotlib` (for plots)
@@ -53,7 +53,7 @@ conda activate CLEAR
 pip install torch numpy scipy nmrglue matplotlib
 ```
 
-### Data preparation
+## Data preparation
 
 - Fully sampled labels: `Python Code/ft1_data/*_label.ft1`
 - Hypercomplex NMRPipe example inputs: `Code/NUS_Data/*_nus.ft1`
@@ -65,7 +65,7 @@ pip install torch numpy scipy nmrglue matplotlib
   - `mask_2c`: binary sampling mask duplicated along channels `(H, W, 2)`
 
 
-### Quick start (pretrained checkpoint)
+## Quick start (pretrained checkpoint)
 
 1) Open and run `Python Code/test.ipynb`.
 2) The notebook loads the pretrained checkpoint `best_model/best_model.pth`, reconstruct undersampled hypercomplex data for different samples, and save the results as hypercomplex files ,and save the results as hypercomplex files`Python Code/Recon_Results/*_recon.ft1`.
@@ -73,7 +73,7 @@ pip install torch numpy scipy nmrglue matplotlib
 
 Default working directory is `Python Code/`.
 
-### Training from scratch
+## Training from scratch
 
 
 **Steps:**
@@ -88,6 +88,7 @@ Default working directory is `Python Code/`.
 cd "Python Code"
 python train.py
 ```
+
 
 
 
