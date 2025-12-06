@@ -8,7 +8,7 @@ Upon publication of the manuscript, the authors may release the code under an op
 
 © 2025 Jingjie Lin and Enping Lin*. All rights reserved.
 
-
+Contact Email: enping.lin@childrens.harvard.edu (Enping Lin)
 
 # Consistency-guided Long-range Enhanced Attention for Recon-struction (CLEAR) of Non-Uniform Sampling NMR
 
@@ -100,6 +100,7 @@ Default working directory is `Python Code/`.
 cd "Python Code"
 python train.py
 ```
+
 
 
 
