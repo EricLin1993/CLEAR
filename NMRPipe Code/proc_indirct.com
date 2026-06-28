@@ -1,6 +1,10 @@
 #!/bin/csh -f
-# Process the indirect-dimension of the reconstructed data
-xyz2pipe -in ./A3DK08_8.ft1 -x -verb \
+# 
+# Process the indirect dimension of the reconstructed data.
+# Replace "XXX_recon.ft1" and "XXX_recon.ft" with the corresponding filenames.
+# Datasets: A3DK08, Yfgj, PSRP, mousethia and Ecolinird.
+#
+xyz2pipe -in ./A3DK08_recon.ft1 -x -verb \
 | nmrPipe -fn TP \
 | nmrPipe -fn SP -off 0.50 -end 0.95 -pow 1 -elb 0.0 -glb 0.0 -c 0.5 \
 | nmrPipe -fn ZF -zf 1 -auto \
@@ -18,7 +22,7 @@ xyz2pipe -in ft2/test%05d.ft2 -z -verb \
 | pipe2xyz -out ft/test%03d.ft3 -z -ov
 
 xyz2pipe -in ft/test%03d.ft3 -z -verb \
-  > ./A3DK08_8.ft
+  > ./A3DK08_recon.ft
 
 /bin/rm -rf ft2
 
